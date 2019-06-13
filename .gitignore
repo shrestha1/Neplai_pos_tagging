@@ -1,3 +1,4 @@
 *.pos
 *.xml
 venv/
+.env

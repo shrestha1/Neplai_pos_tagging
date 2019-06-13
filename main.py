@@ -10,7 +10,12 @@ import re
 
 # import pickle
 
-data = open('/home/dipesh/PycharmProjects/NepaliPOStagging/pos_test_data.pos', 'r')
+import os
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(), override=True)
+file_path = os.environ.get("POS_PATH")
+
+data = open(file_path, 'r')
 contents = data.read()
 # print(type(contents))
 soup = BeautifulSoup(contents, 'lxml')
